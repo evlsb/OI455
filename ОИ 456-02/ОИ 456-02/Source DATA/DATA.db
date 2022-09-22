@@ -1,0 +1,418 @@
+﻿DATA_BLOCK "DATA"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+   STRUCT 
+      offset : Int;
+      Measuring : Struct
+         PT100_Value : Real;   // PT100_Значение
+         PT100_Circuit : Real;   // PT100_Ток
+         TT100_Value : Real;   // TT100_Значение
+         TT100_Circuit : Real;   // TT100_Ток
+         LT100_Value : Real;   // LT100_Значение
+         LT100_Circuit : Real;   // LT100_Ток
+         AG100_Value : Real;   // AG100_Значение
+         AG100_Circuit : Real;   // AG100_Ток
+         PT200_Value : Real;   // PT200_Значение
+         PT200_Circuit : Real;   // PT200_Ток
+         TT200_Value : Real;   // TT200_Значение
+         TT200_Circuit : Real;   // TT200_Ток
+         LT200_Value : Real;   // LT200_Значение
+         LT200_Circuit : Real;   // LT200_Ток
+         AG200_Value : Real;   // AG200_Значение
+         AG200_Circuit : Real;   // AG200_Ток
+         TT500_Value : Real;   // TT500_Значение
+         TT500_Circuit : Real;   // TT500_Ток
+         PCV300_Pologenie : Real;   // PCV300 Положение
+         LCV300_Pologenie : Real;   // LCV300 Положение
+         SIKG_Press : Real;   // Давление СИКГ
+         SIKG_Temp : Real;   // Температура СИКГ
+         SIKG_Flow_ru : Real;   // Расход (раб. усл.) СИКГ
+         SIKG_Flow_stu : Real;   // Расход (ст. усл.) СИКГ
+         SIKG_Flow_ru_prev2h : Real;   // Расход (раб. усл.) СИКГ за предыдущие 2 часа
+         SIKG_Flow_stu_prev2h : Real;   // Расход (ст. усл.) СИКГ за предыдущие 2 часа
+         SIKG_Flow_ru_prevDay : Real;   // Расход (раб. усл.) СИКГ за предыдущие сутки
+         SIKG_Flow_stu_prevDay : Real;   // Расход (ст. усл.) СИКГ за предыдущие сутки
+         SIKG_total : Real;   // Интегральный счетчик
+         SIKN_MassFlow : Real;   // Массовый расход СИКН
+         SIKN_MassFlow_prev2h : Real;   // Массовый расход СИКН за предыдущие 2 часа
+         SIKN_MassFlow_prevDay : Real;   // Массовый расход СИКН за предыдущие сутки
+         SIKN_total : Real;   // Интегральный счетчик
+         XV100_State : Int;   // Состояние XV100: 0-неопределено, 1-закрыт, 2-открыт, 3-авария
+         Head_State : Int;   // Состояние обогрева: 0-выключен, 1-включен, 2-авария
+         Power_State : Int;   // Состояние питания: 0-выключен, 1-включен, 2-авария
+         PCV300_Alarm : Bool;   // PCV300 авария
+         PCV300_Warning : Bool;   // PCV300 предупреждение
+         PCV300_Midle : Bool;   // PCV300 среднее положение
+         PCV300_DIST : Bool;   // PCV300 дистанц. режим
+         PCV300_LOCAL : Bool;   // PCV300 местный. режим
+         LCV300_Alarm : Bool;   // LCV300 авария
+         LCV300_Warning : Bool;   // LCV300 предупреждение
+         LCV300_Midle : Bool;   // LCV300 среднее положение
+         LCV300_DIST : Bool;   // LCV300 дистанц. режим
+         LCV300_LOCAL : Bool;   // LCV300 местный. режим
+         LS100 : Bool;   // LS100
+         LS101 : Bool;   // LS101
+         LS200 : Bool;   // LS200
+         LS201 : Bool;   // LS201
+         HS600_Emer_stop : Bool;   // Кнопка аварийного останова
+         Head_run : Bool;   // Обогрев включен (сигнал с контактора)
+         Power_run : Bool;   // Питание включено (сигнал с контактора)
+         XV100_open : Bool;   // XV100 открыт (сигнал с задвижки) 
+         XV100_close : Bool;   // XV100 закрыт (сигнал с задвижки) 
+         XV100_fault : Bool;   // XV100 неисправность (сигнал с задвижки) 
+         XV100_no_cmd_close : Bool;   // XV100 не закрылся по команде
+         XV100_no_cmd_open : Bool;   // XV100 не открылсяпо команде 
+         Spark : Bool;
+         PT100_HH_Alarm : Bool;
+         PT100_H_Alarm : Bool;
+         PT100_L_Alarm : Bool;
+         PT100_LL_Alarm : Bool;
+         PT100_Chan_Fail : Bool;
+         PT100_Sim : Bool;
+         TT100_HH_Alarm : Bool;
+         TT100_H_Alarm : Bool;
+         TT100_L_Alarm : Bool;
+         TT100_LL_Alarm : Bool;
+         TT100_Chan_Fail : Bool;
+         TT100_Sim : Bool;
+         LT100_HH_Alarm : Bool;
+         LT100_H_Alarm : Bool;
+         LT100_L_Alarm : Bool;
+         LT100_LL_Alarm : Bool;
+         LT100_Chan_Fail : Bool;
+         LT100_Sim : Bool;
+         AG100_HH_Alarm : Bool;
+         AG100_H_Alarm : Bool;
+         AG100_L_Alarm : Bool;
+         AG100_LL_Alarm : Bool;
+         AG100_Chan_Fail : Bool;
+         AG100_Sim : Bool;
+         PT200_HH_Alarm : Bool;
+         PT200_H_Alarm : Bool;
+         PT200_L_Alarm : Bool;
+         PT200_LL_Alarm : Bool;
+         PT200_Chan_Fail : Bool;
+         PT200_Sim : Bool;
+         TT200_HH_Alarm : Bool;
+         TT200_H_Alarm : Bool;
+         TT200_L_Alarm : Bool;
+         TT200_LL_Alarm : Bool;
+         TT200_Chan_Fail : Bool;
+         TT200_Sim : Bool;
+         LT200_HH_Alarm : Bool;
+         LT200_H_Alarm : Bool;
+         LT200_L_Alarm : Bool;
+         LT200_LL_Alarm : Bool;
+         LT200_Chan_Fail : Bool;
+         LT200_Sim : Bool;
+         AG200_HH_Alarm : Bool;
+         AG200_H_Alarm : Bool;
+         AG200_L_Alarm : Bool;
+         AG200_LL_Alarm : Bool;
+         AG200_Chan_Fail : Bool;
+         AG200_Sim : Bool;
+         TT500_HH_Alarm : Bool;
+         TT500_H_Alarm : Bool;
+         TT500_L_Alarm : Bool;
+         TT500_LL_Alarm : Bool;
+         TT500_Chan_Fail : Bool;
+         TT500_Sim : Bool;
+      END_STRUCT;
+      Commands : Struct
+         PT100_Scal_Min_Eu : Real;   // PT100 Нижняя шкала в инж. единицах
+         PT100_Scal_Max_Eu : Real;   // PT100 Верхняя шкала в инж. единицах
+         PT100_HH_Lim : Real;   // PT100 ВАУ
+         PT100_H_Lim : Real;   // PT100 ВПУ
+         PT100_L_Lim : Real;   // PT100 НПУ
+         PT100_LL_Lim : Real;   // PT100 НАУ
+         PT100_Sim_Value : Real;   // PT100 Симуляционное значение
+         TT100_Scal_Min_Eu : Real;   // TT100 Нижняя шкала в инж. единицах
+         TT100_Scal_Max_Eu : Real;   // TT100 Верхняя шкала в инж. единицах
+         TT100_HH_Lim : Real;   // TT100 ВАУ
+         TT100_H_Lim : Real;   // TT100 ВПУ
+         TT100_L_Lim : Real;   // TT100 НПУ
+         TT100_LL_Lim : Real;   // TT100 НАУ
+         TT100_Sim_Value : Real;   // TT100 Симуляционное значение
+         LT100_Scal_Min_Eu : Real;   // LT100 Нижняя шкала в инж. единицах
+         LT100_Scal_Max_Eu : Real;   // LT100 Верхняя шкала в инж. единицах
+         LT100_HH_Lim : Real;   // LT100 ВАУ
+         LT100_H_Lim : Real;   // LT100 ВПУ
+         LT100_L_Lim : Real;   // LT100 НПУ
+         LT100_LL_Lim : Real;   // LT100 НАУ
+         LT100_Sim_Value : Real;   // LT100 Симуляционное значение
+         AG100_Scal_Min_Eu : Real;   // AG100 Нижняя шкала в инж. единицах
+         AG100_Scal_Max_Eu : Real;   // AG100 Верхняя шкала в инж. единицах
+         AG100_HH_Lim : Real;   // AG100 ВАУ
+         AG100_H_Lim : Real;   // AG100 ВПУ
+         AG100_L_Lim : Real;   // AG100 НПУ
+         AG100_LL_Lim : Real;   // AG100 НАУ
+         AG100_Sim_Value : Real;   // AG100 Симуляционное значение
+         PT200_Scal_Min_Eu : Real;   // PT200 Нижняя шкала в инж. единицах
+         PT200_Scal_Max_Eu : Real;   // PT200 Верхняя шкала в инж. единицах
+         PT200_HH_Lim : Real;   // PT200 ВАУ
+         PT200_H_Lim : Real;   // PT200 ВПУ
+         PT200_L_Lim : Real;   // PT200 НПУ
+         PT200_LL_Lim : Real;   // PT200 НАУ
+         PT200_Sim_Value : Real;   // PT200 Симуляционное значение
+         TT200_Scal_Min_Eu : Real;   // TT200 Нижняя шкала в инж. единицах
+         TT200_Scal_Max_Eu : Real;   // TT200 Верхняя шкала в инж. единицах
+         TT200_HH_Lim : Real;   // TT200 ВАУ
+         TT200_H_Lim : Real;   // TT200 ВПУ
+         TT200_L_Lim : Real;   // TT200 НПУ
+         TT200_LL_Lim : Real;   // TT200 НАУ
+         TT200_Sim_Value : Real;   // TT200 Симуляционное значение
+         LT200_Scal_Min_Eu : Real;   // LT200 Нижняя шкала в инж. единицах
+         LT200_Scal_Max_Eu : Real;   // LT200 Верхняя шкала в инж. единицах
+         LT200_HH_Lim : Real;   // LT200 ВАУ
+         LT200_H_Lim : Real;   // LT200 ВПУ
+         LT200_L_Lim : Real;   // LT200 НПУ
+         LT200_LL_Lim : Real;   // LT200 НАУ
+         LT200_Sim_Value : Real;   // LT200 Симуляционное значение
+         AG200_Scal_Min_Eu : Real;   // AG200 Нижняя шкала в инж. единицах
+         AG200_Scal_Max_Eu : Real;   // AG200 Верхняя шкала в инж. единицах
+         AG200_HH_Lim : Real;   // AG200 ВАУ
+         AG200_H_Lim : Real;   // AG200 ВПУ
+         AG200_L_Lim : Real;   // AG200 НПУ
+         AG200_LL_Lim : Real;   // AG200 НАУ
+         AG200_Sim_Value : Real;   // AG200 Симуляционное значение
+         TT500_Scal_Min_Eu : Real;   // TT500 Нижняя шкала в инж. единицах
+         TT500_Scal_Max_Eu : Real;   // TT500 Верхняя шкала в инж. единицах
+         TT500_HH_Lim : Real;   // TT500 ВАУ
+         TT500_H_Lim : Real;   // TT500 ВПУ
+         TT500_L_Lim : Real;   // TT500 НПУ
+         TT500_LL_Lim : Real;   // TT500 НАУ
+         TT500_Sim_Value : Real;   // TT500 Симуляционное значение
+         PCV300_Setpoint : Real;   // PCV300 Уставка
+         PCV300_ManualValue : Real;   // PCV300 Задание в ручном режиме
+         PCV300_Gain : Real;   // PCV300 Коэфф. пропорциональности
+         PCV300_Ti : Real;   // PCV300 Время интегрирования
+         PCV300_Td : Real;   // PCV300 Время дифференциирования
+         PCV300_TdFiltRatio : Real;   // PCV300 Зона нечувствительности
+         PCV300_OutputUpperLimit : Real;   // PCV300 Верхнее ограничение хода
+         PCV300_OutputLowerLimit : Real;   // PCV300 Нижнее ограничение хода
+         LCV300_Setpoint : Real;   // LCV300 Уставка
+         LCV300_ManualValue : Real;   // LCV300 Задание в ручном режиме
+         LCV300_Gain : Real;   // LCV300 Коэфф. пропорциональности
+         LCV300_Ti : Real;   // LCV300 Время интегрирования
+         LCV300_Td : Real;   // LCV300 Время дифференциирования
+         LCV300_TdFiltRatio : Real;   // LCV300 Зона нечувствительности
+         LCV300_OutputUpperLimit : Real;   // LCV300 Верхнее ограничение хода
+         LCV300_OutputLowerLimit : Real;   // LCV300 Нижнее ограничение хода
+         PT100_HH_Alarm_En : Bool;   // PT100 Включить ВАУ
+         PT100_H_Alarm_En : Bool;   // PT100 Включить ВПУ
+         PT100_L_Alarm_En : Bool;   // PT100 Включить НПУ
+         PT100_LL_Alarm_En : Bool;   // PT100 Включить НАУ
+         PT100_Sim_En : Bool;   // PT100 Включить симуляцию
+         TT100_HH_Alarm_En : Bool;   // TT100 Включить ВАУ
+         TT100_H_Alarm_En : Bool;   // TT100 Включить ВПУ
+         TT100_L_Alarm_En : Bool;   // TT100 Включить НПУ
+         TT100_LL_Alarm_En : Bool;   // TT100 Включить НАУ
+         TT100_Sim_En : Bool;   // TT100 Включить симуляцию
+         LT100_HH_Alarm_En : Bool;   // LT100 Включить ВАУ
+         LT100_H_Alarm_En : Bool;   // LT100 Включить ВПУ
+         LT100_L_Alarm_En : Bool;   // LT100 Включить НПУ
+         LT100_LL_Alarm_En : Bool;   // LT100 Включить НАУ
+         LT100_Sim_En : Bool;   // LT100 Включить симуляцию
+         AG100_HH_Alarm_En : Bool;   // AG100 Включить ВАУ
+         AG100_H_Alarm_En : Bool;   // AG100 Включить ВПУ
+         AG100_L_Alarm_En : Bool;   // AG100 Включить НПУ
+         AG100_LL_Alarm_En : Bool;   // AG100 Включить НАУ
+         AG100_Sim_En : Bool;   // AG100 Включить симуляцию
+         PT200_HH_Alarm_En : Bool;   // PT200 Включить ВАУ
+         PT200_H_Alarm_En : Bool;   // PT200 Включить ВПУ
+         PT200_L_Alarm_En : Bool;   // PT200 Включить НПУ
+         PT200_LL_Alarm_En : Bool;   // PT200 Включить НАУ
+         PT200_Sim_En : Bool;   // PT200 Включить симуляцию
+         TT200_HH_Alarm_En : Bool;   // TT200 Включить ВАУ
+         TT200_H_Alarm_En : Bool;   // TT200 Включить ВПУ
+         TT200_L_Alarm_En : Bool;   // TT200 Включить НПУ
+         TT200_LL_Alarm_En : Bool;   // TT200 Включить НАУ
+         TT200_Sim_En : Bool;   // TT200 Включить симуляцию
+         LT200_HH_Alarm_En : Bool;   // LT200 Включить ВАУ
+         LT200_H_Alarm_En : Bool;   // LT200 Включить ВПУ
+         LT200_L_Alarm_En : Bool;   // LT200 Включить НПУ
+         LT200_LL_Alarm_En : Bool;   // LT200 Включить НАУ
+         LT200_Sim_En : Bool;   // LT200 Включить симуляцию
+         AG200_HH_Alarm_En : Bool;   // AG200 Включить ВАУ
+         AG200_H_Alarm_En : Bool;   // AG200 Включить ВПУ
+         AG200_L_Alarm_En : Bool;   // AG200 Включить НПУ
+         AG200_LL_Alarm_En : Bool;   // AG200 Включить НАУ
+         AG200_Sim_En : Bool;   // AG200 Включить симуляцию
+         TT500_HH_Alarm_En : Bool;   // TT500 Включить ВАУ
+         TT500_H_Alarm_En : Bool;   // TT500 Включить ВПУ
+         TT500_L_Alarm_En : Bool;   // TT500 Включить НПУ
+         TT500_LL_Alarm_En : Bool;   // TT500 Включить НАУ
+         TT500_Sim_En : Bool;   // TT500 Включить симуляцию
+         PCV300_ManualEnable : Bool;   // PCV300 включить ручной режим
+         LCV300_ManualEnable : Bool;   // LCV300 включить ручной режим
+         GFU_Spark : Bool;   // Подать искру на ГФУ
+         Head_cmd_on : Bool;   // Обогрев включить
+         Head_cmd_off : Bool;   // Обогрев выключить
+         Head_cmd_reset : Bool;   // Обогрев сброс ошибки
+         Power_cmd_on : Bool;   // Питание установки включить
+         Power_cmd_off : Bool;   // Питание установки выключить
+         Power_cmd_reset : Bool;   // Питание установки сброс ошибки
+         XV100_cmd_open : Bool;   // XV100 Команда открыть
+         XV100_cmd_close : Bool;   // XV100 Команда закрыть
+         XV100_cmd_reset : Bool;   // XV100 Команда сброс ошибки
+      END_STRUCT;
+      AI2_Ch1 : Word;
+      AI2_Ch2 : Word;
+      AI2_Ch3 : Word;
+      AI2_Ch4 : Word;
+      AI2_Ch5 : Word;
+      AI2_Ch6 : Word;
+      AI2_Ch7 : Word;
+      SIKG2_Press : Real;
+      SIKG2_Temp : Real;
+      SIKG2_Flow_ru : Real;
+      SIKG2_Flow_stu : Real;
+      SIKG2_Flow_ru_prev2h : Real;
+      SIKG2_Flow_stu_prev2h : Real;
+      SIKG2_Flow_ru_prevDay : Real;
+      SIKG2_Flow_stu_prevDay : Real;
+      SIKG2_total : Real;
+      ArchDay : Int;
+      ArchMonth : Int;
+      ArchYear : Int;
+      L1_Press_0_2h : Real;
+      L1_Press_2_4h : Real;
+      L1_Press_4_6h : Real;
+      L1_Press_6_8h : Real;
+      L1_Press_8_10h : Real;
+      L1_Press_10_12h : Real;
+      L1_Press_12_14h : Real;
+      L1_Press_14_16h : Real;
+      L1_Press_16_18h : Real;
+      L1_Press_18_20h : Real;
+      L1_Press_20_22h : Real;
+      L1_Press_22_24h : Real;
+      L1_Press_0_24h : Real;
+      L1_Temp_0_2h : Real;
+      L1_Temp_2_4h : Real;
+      L1_Temp_4_6h : Real;
+      L1_Temp_6_8h : Real;
+      L1_Temp_8_10h : Real;
+      L1_Temp_10_12h : Real;
+      L1_Temp_12_14h : Real;
+      L1_Temp_14_16h : Real;
+      L1_Temp_16_18h : Real;
+      L1_Temp_18_20h : Real;
+      L1_Temp_20_22h : Real;
+      L1_Temp_22_24h : Real;
+      L1_Temp_0_24h : Real;
+      L1_Volume_0_2h : Real;
+      L1_Volume_2_4h : Real;
+      L1_Volume_4_6h : Real;
+      L1_Volume_6_8h : Real;
+      L1_Volume_8_10h : Real;
+      L1_Volume_10_12h : Real;
+      L1_Volume_12_14h : Real;
+      L1_Volume_14_16h : Real;
+      L1_Volume_16_18h : Real;
+      L1_Volume_18_20h : Real;
+      L1_Volume_20_22h : Real;
+      L1_Volume_22_24h : Real;
+      L1_Volume_0_24h : Real;
+      L1_Status_0_2h : Int;
+      L1_Status_2_4h : Int;
+      L1_Status_4_6h : Int;
+      L1_Status_6_8h : Int;
+      L1_Status_8_10h : Int;
+      L1_Status_10_12h : Int;
+      L1_Status_12_14h : Int;
+      L1_Status_14_16h : Int;
+      L1_Status_16_18h : Int;
+      L1_Status_18_20h : Int;
+      L1_Status_20_22h : Int;
+      L1_Status_22_24h : Int;
+      L1_Status_0_24h : Int;
+      L2_Volume_0_2h : Real;
+      L2_Volume_2_4h : Real;
+      L2_Volume_4_6h : Real;
+      L2_Volume_6_8h : Real;
+      L2_Volume_8_10h : Real;
+      L2_Volume_10_12h : Real;
+      L2_Volume_12_14h : Real;
+      L2_Volume_14_16h : Real;
+      L2_Volume_16_18h : Real;
+      L2_Volume_18_20h : Real;
+      L2_Volume_20_22h : Real;
+      L2_Volume_22_24h : Real;
+      L2_Volume_0_24h : Real;
+      L2_Status_0_2h : Int;
+      L2_Status_2_4h : Int;
+      L2_Status_4_6h : Int;
+      L2_Status_6_8h : Int;
+      L2_Status_8_10h : Int;
+      L2_Status_10_12h : Int;
+      L2_Status_12_14h : Int;
+      L2_Status_14_16h : Int;
+      L2_Status_16_18h : Int;
+      L2_Status_18_20h : Int;
+      L2_Status_20_22h : Int;
+      L2_Status_22_24h : Int;
+      L2_Status_0_24h : Int;
+      L3_Press_0_2h : Real;
+      L3_Press_2_4h : Real;
+      L3_Press_4_6h : Real;
+      L3_Press_6_8h : Real;
+      L3_Press_8_10h : Real;
+      L3_Press_10_12h : Real;
+      L3_Press_12_14h : Real;
+      L3_Press_14_16h : Real;
+      L3_Press_16_18h : Real;
+      L3_Press_18_20h : Real;
+      L3_Press_20_22h : Real;
+      L3_Press_22_24h : Real;
+      L3_Press_0_24h : Real;
+      L3_Temp_0_2h : Real;
+      L3_Temp_2_4h : Real;
+      L3_Temp_4_6h : Real;
+      L3_Temp_6_8h : Real;
+      L3_Temp_8_10h : Real;
+      L3_Temp_10_12h : Real;
+      L3_Temp_12_14h : Real;
+      L3_Temp_14_16h : Real;
+      L3_Temp_16_18h : Real;
+      L3_Temp_18_20h : Real;
+      L3_Temp_20_22h : Real;
+      L3_Temp_22_24h : Real;
+      L3_Temp_0_24h : Real;
+      L3_Volume_0_2h : Real;
+      L3_Volume_2_4h : Real;
+      L3_Volume_4_6h : Real;
+      L3_Volume_6_8h : Real;
+      L3_Volume_8_10h : Real;
+      L3_Volume_10_12h : Real;
+      L3_Volume_12_14h : Real;
+      L3_Volume_14_16h : Real;
+      L3_Volume_16_18h : Real;
+      L3_Volume_18_20h : Real;
+      L3_Volume_20_22h : Real;
+      L3_Volume_22_24h : Real;
+      L3_Volume_0_24h : Real;
+      L3_Status_0_2h : Int;
+      L3_Status_2_4h : Int;
+      L3_Status_4_6h : Int;
+      L3_Status_6_8h : Int;
+      L3_Status_8_10h : Int;
+      L3_Status_10_12h : Int;
+      L3_Status_12_14h : Int;
+      L3_Status_14_16h : Int;
+      L3_Status_16_18h : Int;
+      L3_Status_18_20h : Int;
+      L3_Status_20_22h : Int;
+      L3_Status_22_24h : Int;
+      L3_Status_0_24h : Int;
+      StartReadArchive : Int;
+      ClearArchive : Int;
+      Volume_C1 : Real;
+      Volume_BE : Real;
+   END_STRUCT;
+
+
+BEGIN
+
+END_DATA_BLOCK
+
